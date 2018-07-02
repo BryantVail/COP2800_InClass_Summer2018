@@ -2,6 +2,8 @@
 
 package pr3;
 
+
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -9,13 +11,15 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-		TextField txtOutput = new TextField("Selection");
+		TextField txtOutput = new TextField("Enter an Integer number.");
+		txtOutput.setFont(new Font("Times New Roman", 18));
 		
 		//stage
 		primaryStage.setTitle("Project 3");

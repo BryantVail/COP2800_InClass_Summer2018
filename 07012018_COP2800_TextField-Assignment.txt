@@ -1,0 +1,24 @@
+Constructor and Description
+Font(double size)
+Constructs a font using the default face "System".
+Font(java.lang.String name, double size)
+Constructs a font using the specified full face name and size
+
+
+CT4
+Due Sunday by 11:59pm  
+Points 100  
+Submitting a text entry box Available Jun 25 at 12am - Jul 4 at 11:59pm 10 days
+Provide one line of code that instantiates an object of a textfield. 
+The textfield should display 
+	the the string "Enter an Integer number.".
+Provide code that changes 
+
+	the font of the textfield to 
+		"Times New Roman", and set the 
+	size to 
+		18.
+
+
+TextField txtBox = new TextField("Enter an Integer number.");
+txtBox.setFont(new Font("Times New Roman", 18);
