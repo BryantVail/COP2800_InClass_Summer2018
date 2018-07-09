@@ -1,7 +1,6 @@
 package pr4;
 //Bryant Vail
 
-
 import javafx.animation.Animation;
 import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
@@ -24,23 +23,16 @@ public class Main extends Application {
 	}
 	public void start(Stage primaryStage) {
 		Pane pane = new Pane();
-		
-		
-		
 		HBox hbox = new HBox();
-		
 		
 		//circle that will be animated
 		Circle orbitCircle = new Circle(75, 50, 20);
 		orbitCircle.setFill(Color.ORANGE);
 		
-		
 		//create arc
 		Arc pendulumArc = new Arc(100,200,80,45,45,100);
 		pendulumArc.setStroke(Color.BLACK);
 		pendulumArc.setFill(Color.WHITE);
-		
-		
 		
 		//create path transition
 		PathTransition pt = new PathTransition();
@@ -54,6 +46,7 @@ public class Main extends Application {
 		pt.setAutoReverse(true);
 		pt.play();
 		
+		//even on the arc to pause the circle
 		pendulumArc.setOnMousePressed(e -> {
 			pt.pause();
 		});
@@ -62,6 +55,7 @@ public class Main extends Application {
 		});
 		
 		Button toggleButton = new Button("Toggle Motion");
+		//toggleButton toggle logic pt.getStatus() == Animation.Status.RUNNING
 		toggleButton.setOnAction(e -> {
 			if(pt.getStatus() == Animation.Status.RUNNING) {
 				pt.pause();
@@ -82,10 +76,5 @@ public class Main extends Application {
 		primaryStage.setTitle("Path Transition Demo");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		
-		
-		
-
-		
 	}
 }
